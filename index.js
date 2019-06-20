@@ -19,8 +19,6 @@ const list = (first, ...rest) => {
 	}
 }
 
-
-
 const listRef = (items, n) => {
 	if (n === 0) {
 		return first(items);
@@ -28,6 +26,11 @@ const listRef = (items, n) => {
 		return listRef(rest(items), n - 1);
 	}
 }
+
+// Association lists
+
+// Hashmaps
+
 
 // Aliases
 const caar = (pair) => first(first(pair));
@@ -52,7 +55,6 @@ print(simple)
 let list1 = pair(1, pair(2, pair(3, pair(4, pair(5, null)))));
 console.log(first(list1));
 console.log(first(rest(list1)));
-
 
 console.log(listRef(list1, 3));
 
